@@ -15,17 +15,47 @@
             </a>
             <a class="navbar-brand ml-auto">
                 <span class="navbar-brand mb-0 h1">Repuestos GRUPO7</span>
+                <button type="button" class="btn btn-info btn-lg" onclick="location.href='/';">INICIO</button>
             </a>
         </nav>
+        <br><br><br><br>
+        <div class="row" style="background-color:lavender;">
+            <div class="col-2" >
+              <button type="button" class="btn btn-primary btn-lg" onclick="location.href='/producto';">Registrar producto</button>
+            </div>
+            <div class="col-2">
+              <button type="button" class="btn btn-primary btn-lg" onclick="location.href='/producto';">Asignar sucursal</button>
+            </div>
+            <div class="col-2">
+              <button type="button" class="btn btn-primary btn-lg" onclick="location.href='/producto';">Consultar Producto</button>
+            </div> 
+            <div class="col-2" >
+              <button type="button" class="btn btn-primary btn-lg" onclick="location.href='/producto';">Dar de Baja Producto</button>
+            </div>
+            <div class="col-2">
+              <button type="button" class="btn btn-primary btn-lg" onclick="location.href='/producto';">Actualizar Producto</button>
+            </div>
+            <div class="col-2">
+              <button type="button" class="btn btn-primary btn-lg" onclick="location.href='/producto';">Login Admin</button>
+            </div> 
+        </div>
+         <br><br>
+          
         
     <!-- body -->
     @section('body')
       <div class="container">
         @yield('content')
     @show
+
     <!-- footer -->
     @section('footer')
-    <h3> Footer de mi web </h3>
+        <footer class="bg-light text-center text-lg-start fixed-bottom">
+          <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+             © 2022 Framework Seccion 51 Grupo 7 Copyright
+           <a class="text-dark" href="https://www.ciisa.cl">ciisa.cl</a>
+          </div>
+       </footer>
     @show
 
 
