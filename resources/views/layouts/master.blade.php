@@ -11,7 +11,7 @@
     @section('header')
         <nav class="navbar navbar-dark bg-dark fixed-top">
             <a class="navbar-brand">
-                <span class="navbar-brand mb-0 h1">Sistema de gestion de Stock</span>
+                <span class="navbar-brand mb-0 h1">  Sistema de gestion de Stock</span>
             </a>
             <a class="navbar-brand ml-auto">
                 <span class="navbar-brand mb-0 h1">Repuestos GRUPO7</span>
@@ -20,24 +20,17 @@
         </nav>
         <br><br><br><br>
         <div class="row" style="background-color:lavender;">
+            <div class="col-3" ></div>
             <div class="col-2" >
               <button type="button" class="btn btn-primary btn-lg" onclick="location.href='/producto';">Registrar producto</button>
             </div>
             <div class="col-2">
-              <button type="button" class="btn btn-primary btn-lg" onclick="location.href='/producto';">Asignar sucursal</button>
-            </div>
-            <div class="col-2">
-              <button type="button" class="btn btn-primary btn-lg" onclick="location.href='/producto';">Consultar Producto</button>
+              <button type="button" class="btn btn-primary btn-lg" onclick="location.href='/producto';">Mantencion Producto</button>
             </div> 
-            <div class="col-2" >
-              <button type="button" class="btn btn-primary btn-lg" onclick="location.href='/producto';">Dar de Baja Producto</button>
-            </div>
-            <div class="col-2">
-              <button type="button" class="btn btn-primary btn-lg" onclick="location.href='/producto';">Actualizar Producto</button>
-            </div>
             <div class="col-2">
               <button type="button" class="btn btn-primary btn-lg" onclick="location.href='/producto';">Login Admin</button>
             </div> 
+            <div class="col-3" ></div>
         </div>
          <br><br>
           
