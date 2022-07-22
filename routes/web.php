@@ -17,12 +17,15 @@ Route::get('/', function () {
     return view('/layouts/master');
 });
 
-Route::get('/producto', function () {
-    return view('/producto');
+Route::get('/prod', function () {
+    return view('/prod');
 });
-
-Route::get('/contacto/{nombre?}', function ($nombre="x") {
-    return view('contacto',array(
-        "nombre" => $nombre
-    ));
+Route::get('/ingresar', function () {
+    return view('/ingresar-login');
+});
+Route::get('/registrar', function () {
+    return view('/registrar-login');
+});
+Route::get('/buscar', function () {
+    return view('/buscar-producto');
 });

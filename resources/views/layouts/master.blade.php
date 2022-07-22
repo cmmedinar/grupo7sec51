@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Repuestos G7</title>
+    <title>Gestion Productos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
   </head>
   <body>
@@ -11,26 +11,29 @@
     @section('header')
         <nav class="navbar navbar-dark bg-dark fixed-top">
             <a class="navbar-brand">
-                <span class="navbar-brand mb-0 h1">  Sistema de gestion de Stock</span>
+                <span class="navbar-brand mb-0 h1">Sistema de gestion de Stock</span>
             </a>
             <a class="navbar-brand ml-auto">
-                <span class="navbar-brand mb-0 h1">Repuestos GRUPO7</span>
+                <span class="navbar-brand mb-0 h1">Framework Sec51 G7</span>
                 <button type="button" class="btn btn-info btn-lg" onclick="location.href='/';">INICIO</button>
             </a>
         </nav>
         <br><br><br><br>
         <div class="row" style="background-color:lavender;">
-            <div class="col-3" ></div>
+            <div class="col-2" ></div>
             <div class="col-2" >
-              <button type="button" class="btn btn-primary btn-lg" onclick="location.href='/producto';">Registrar producto</button>
+              <button type="button" class="btn btn-primary btn-lg" onclick="location.href='/prod';">Registrar producto</button>
             </div>
             <div class="col-2">
-              <button type="button" class="btn btn-primary btn-lg" onclick="location.href='/producto';">Mantencion Producto</button>
+              <button type="button" class="btn btn-primary btn-lg" onclick="location.href='/buscar';">Buscar Producto</button>
             </div> 
             <div class="col-2">
-              <button type="button" class="btn btn-primary btn-lg" onclick="location.href='/producto';">Login Admin</button>
+              <button type="button" class="btn btn-primary btn-lg" onclick="location.href='/registrar';">Registro Usuario</button>
             </div> 
-            <div class="col-3" ></div>
+            <div class="col-2">
+              <button type="button" class="btn btn-primary btn-lg" onclick="location.href='/ingresar';">Login Admin</button>
+            </div>
+            <div class="col-2" ></div>
         </div>
          <br><br>
           
