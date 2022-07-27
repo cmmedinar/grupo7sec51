@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Gestion Productos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <link rel="stylesheet" href="public/css/estilo.css" >
   </head>
   <body>
     <!-- header -->
@@ -23,12 +22,7 @@
         <div class="row" style="background-color:lavender;">
             <div class="col-2" ></div>
             <div class="col-2" >
-            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-              <option selected>Maestro</option>
-              <option value="1">Productos</option>
-              <option value="2">Sucursales</option>
-              <option value="3">Usuarios</option>
-            </select>
+              <button type="button" class="btn btn-primary btn-lg" onclick="location.href='/prod';">Registrar producto</button>
             </div>
             <div class="col-2">
               <button type="button" class="btn btn-primary btn-lg" onclick="location.href='/buscar';">Buscar Producto</button>
