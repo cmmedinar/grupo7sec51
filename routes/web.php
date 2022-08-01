@@ -18,8 +18,25 @@ Route::get('/', function () {
 });
 
 Route::get('/prod', function () {
-    return view('/prod');
+    return view('/producto');
 });
+Route::get('/creaprod', function () {
+    return view('/creaproducto');
+});
+Route::get('/modprod', function () {
+    return view('/modproducto');
+});
+Route::get('/eliprod', function () {
+    return view('/eliproducto');
+});
+
+Route::get('/suc', function () {
+    return view('/sucursal');
+});
+Route::get('/creasuc', function () {
+    return view('/creasucursal');
+});
+
 Route::get('/ingresar', function () {
     return view('/ingresar-login');
 });

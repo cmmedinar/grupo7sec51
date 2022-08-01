@@ -5,44 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Gestion Productos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <link rel="stylesheet" href="public/css/estilo.css" >
+    <link rel="stylesheet" href="css/estilo.css" >
   </head>
   <body>
     <!-- header -->
     @section('header')
-        <nav class="navbar navbar-dark bg-dark fixed-top">
-            <a class="navbar-brand">
-                <span class="navbar-brand mb-0 h1">Sistema de gestion de Stock</span>
-            </a>
-            <a class="navbar-brand ml-auto">
-                <span class="navbar-brand mb-0 h1">Framework Sec51 G7</span>
-                <button type="button" class="btn btn-info btn-lg" onclick="location.href='/';">INICIO</button>
-            </a>
-        </nav>
-        <br><br><br><br>
-        <div class="row" style="background-color:lavender;">
-            <div class="col-2" ></div>
-            <div class="col-2" >
-            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-              <option selected>Maestro</option>
-              <option value="1">Productos</option>
-              <option value="2">Sucursales</option>
-              <option value="3">Usuarios</option>
-            </select>
-            </div>
-            <div class="col-2">
-              <button type="button" class="btn btn-primary btn-lg" onclick="location.href='/buscar';">Buscar Producto</button>
-            </div> 
-            <div class="col-2">
-              <button type="button" class="btn btn-primary btn-lg" onclick="location.href='/registrar';">Registro Usuario</button>
-            </div> 
-            <div class="col-2">
-              <button type="button" class="btn btn-primary btn-lg" onclick="location.href='/ingresar';">Login Admin</button>
-            </div>
-            <div class="col-2" ></div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand mb-0 h1" href="/">Sistema Gestion Stock</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb- mb-lg-0">
+            <li class="nav-item">
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Mestro
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/prod">Productos</a></li>
+                <li><a class="dropdown-item" href="/suc">Sucursales</a></li>
+                <li><a class="dropdown-item" href="#">Categorias</a></li>
+                <li><a class="dropdown-item" href="#">Usuarios</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Movimiento
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Productos</a></li>
+                <li><a class="dropdown-item" href="#">Sucursal</a></li>
+                <li><a class="dropdown-item" href="#">Usuarios</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Consultas
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Productos</a></li>
+                <li><a class="dropdown-item" href="#">Sucursal</a></li>
+                <li><a class="dropdown-item" href="#">Usuarios</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Login Admin</a>
+            </li>
+          </ul>
         </div>
-         <br><br>
-          
+      </div>
+    </nav>
+    <br><br>
+        
         
     <!-- body -->
     @section('body')
