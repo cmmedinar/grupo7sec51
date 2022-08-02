@@ -17,18 +17,24 @@ Route::get('/', function () {
     return view('/layouts/master');
 });
 
-Route::get('/prod', function () {
-    return view('/producto');
-});
-Route::get('/creaprod', function () {
-    return view('/creaproducto');
-});
-Route::get('/modprod', function () {
-    return view('/modproducto');
-});
-Route::get('/eliprod', function () {
-    return view('/eliproducto');
-});
+
+Route::get('/prod','ProductoController@menuprod');
+Route::get('/creaprod','ProductoController@creaprod');
+Route::get('/modprod','ProductoController@modprod');
+Route::get('/eliprod','ProductoController@eliprod');
+
+
+Route::get('/suc','SucursalController@menusuc');
+Route::get('/creasuc','SucursalController@creasuc');
+Route::get('/modsuc','SucursalController@modsuc');
+Route::get('/elisuc','SucursalController@elisuc');
+
+Route::get('/cat','CategoriaController@menucat');
+Route::get('/creacat','CategoriaController@creacat');
+Route::get('/modcat','CategoriaController@modcat');
+Route::get('/elicat','CategoriaController@elicat');
+
+
 
 Route::get('/suc', function () {
     return view('/sucursal');

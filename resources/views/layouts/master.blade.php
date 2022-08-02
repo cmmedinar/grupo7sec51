@@ -27,7 +27,7 @@
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="/prod">Productos</a></li>
                 <li><a class="dropdown-item" href="/suc">Sucursales</a></li>
-                <li><a class="dropdown-item" href="#">Categorias</a></li>
+                <li><a class="dropdown-item" href="/cat">Categorias</a></li>
                 <li><a class="dropdown-item" href="#">Usuarios</a></li>
               </ul>
             </li>
