@@ -35,20 +35,3 @@ Route::get('/modcat','CategoriaController@modcat');
 Route::get('/elicat','CategoriaController@elicat');
 
 
-
-Route::get('/suc', function () {
-    return view('/sucursal');
-});
-Route::get('/creasuc', function () {
-    return view('/creasucursal');
-});
-
-Route::get('/ingresar', function () {
-    return view('/ingresar-login');
-});
-Route::get('/registrar', function () {
-    return view('/registrar-login');
-});
-Route::get('/buscar', function () {
-    return view('/buscar-producto');
-});
