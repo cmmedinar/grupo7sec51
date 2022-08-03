@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Gestion Productos</title>
+    <title>Stock @yield('title')</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="css/estilo.css" >
   </head>
@@ -46,7 +46,10 @@
                 Consultas
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Productos</a></li>
+                <li><a class="dropdown-item" href="/consulta/prodAll/">Listado de Productos</a></li>
+                <li><a class="dropdown-item" href="/consulta/sucAll/">Listado de Sucursales</a></li>
+                <li><a class="dropdown-item" href="/consulta/catAll/">Listado de Categorias</a></li>
+                <li><a class="dropdown-item" href="/consulta/prod/">Buscar Producto</a></li>
                 <li><a class="dropdown-item" href="#">Sucursal</a></li>
                 <li><a class="dropdown-item" href="#">Usuarios</a></li>
               </ul>
@@ -63,7 +66,6 @@
         
     <!-- body -->
     @section('body')
-      <div class="container">
         @yield('content')
     @show
 
