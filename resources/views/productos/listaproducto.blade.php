@@ -23,9 +23,17 @@
                 <tr style="font-size: medium ">
                       <td align="center">{{ $producto->id }}</td>  
                       <td>{{ $producto->codigo }}</td>  
-                      <td>{{ $producto->nombre }}</td>  
-                      <td>{{ $producto->categoria_id }}</td>  
-                      <td>{{ $producto->sucursal_id }}</td>  
+                      <td>{{ $producto->nombre }}</td> 
+                      @foreach($categorias as $categoria)
+                        @if($categoria->id == $producto->categoria_id)
+                           <td>{{ $categoria->nombre }}</td>  
+                        @endif
+                      @endforeach 
+                      @foreach($sucursals as $sucursal)
+                        @if($sucursal->id == $producto->sucursal_id)
+                           <td>{{ $sucursal->nombre }}</td>  
+                        @endif
+                      @endforeach  
                       <td>{{ $producto->descripcion }}</td>  
                       <td align="center">{{ $producto->cantidad }}</td>  
                       <td align="right">${{ $producto->precio }}</td>  

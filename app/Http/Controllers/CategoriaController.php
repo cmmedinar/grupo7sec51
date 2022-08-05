@@ -34,4 +34,24 @@ class CategoriaController extends Controller
         ]);
     }
 
+    public function grabacat(Request $request){
+
+        $this->validate($request,[
+            'nomcat' => 'required',
+            'descat' => 'required'            
+        ]);  
+      
+    //dd($request);
+    $categoria = new Categoria();
+    $categoria->nombre = $request -> nomcat;
+    $categoria->descripcion = $request -> descat;
+    
+    $categoria->save();
+
+
+    //volvemos a cargar el formulario de ingreso
+    return view('/categorias/creacategoria');
+
+    }
+
 }

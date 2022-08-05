@@ -33,5 +33,30 @@ class SucursalController extends Controller
 
         ]);
     }
+
+    public function grabasuc(Request $request){
+
+        $this->validate($request,[
+            'nomsuc' => 'required',
+            'dirsuc' => 'required',
+            'comsuc' => 'required',
+            'ciusuc' => 'required',
+            'telsuc' => 'required'            
+        ]);  
+      
+    //dd($request);
+    $sucursal = new Sucursal();
+    $sucursal->nombre = $request -> nomsuc;
+    $sucursal->direccion = $request -> dirsuc;
+    $sucursal->comuna = $request -> comsuc;
+    $sucursal->ciudad = $request -> ciusuc;
+    $sucursal->telefono = $request -> telsuc;
+    
+    $sucursal->save();
+
+
+    //volvemos a cargar el formulario de ingreso
+    return view('/sucursales/creasucursal');
+    }
    
 }
