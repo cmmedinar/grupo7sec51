@@ -22,7 +22,7 @@
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Mestro
+                Mestros
               </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="/prod">Productos</a></li>
@@ -33,12 +33,12 @@
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Movimiento
+                Transaccion
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Productos</a></li>
-                <li><a class="dropdown-item" href="#">Sucursal</a></li>
-                <li><a class="dropdown-item" href="#">Usuarios</a></li>
+                <li><a class="dropdown-item" href="#">Venta</a></li>
+                <li><a class="dropdown-item" href="#">Compra</a></li>
+                <li><a class="dropdown-item" href="#">Traslado</a></li>
               </ul>
             </li>
             <li class="nav-item dropdown">
@@ -46,12 +46,11 @@
                 Consultas
               </a>
               <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/consulta/prod/">Buscar Producto</a></li>
                 <li><a class="dropdown-item" href="/consulta/prodAll/">Listado de Productos</a></li>
                 <li><a class="dropdown-item" href="/consulta/sucAll/">Listado de Sucursales</a></li>
                 <li><a class="dropdown-item" href="/consulta/catAll/">Listado de Categorias</a></li>
-                <li><a class="dropdown-item" href="/consulta/prod/">Buscar Producto</a></li>
-                <li><a class="dropdown-item" href="#">Sucursal</a></li>
-                <li><a class="dropdown-item" href="#">Usuarios</a></li>
+                
               </ul>
             </li>
             <li class="nav-item">

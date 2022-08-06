@@ -8,10 +8,10 @@
         <button type="button" class="btn btn-primary btn-lg" onclick="location.href='/creaprod';">Crear Producto</button>
      </div>
      <div class="col text-center" >
-        <button type="button" class="btn btn-primary btn-lg" onclick="location.href='/modprod';">Modificar Producto</button>
+        <button type="button" class="btn btn-primary btn-lg" onclick="location.href='/modprod';" disabled>Modificar Producto</button>
      </div>
      <div class="col text-center" >   
-        <button type="button" class="btn btn-primary btn-lg" onclick="location.href='/eliprod';">Eliminar Producto</button>
+        <button type="button" class="btn btn-primary btn-lg" onclick="location.href='/eliprod';" disabled>Eliminar Producto</button>
      </div>
   </div>
 </div>

@@ -53,7 +53,7 @@
       <label for="desprod">Descripcion Producto</label>
       <input type="text" class="form-control" id="desprod" name="desprod">
     </div>
-    <div class="col-4"></div>
+    <div class="col-2"></div>
   </div>
   <br>
   <div class="row">

@@ -19,28 +19,25 @@ Route::get('/', function () {
 
 
 
-Route::get('/consulta/prod','ProductoController@consultaprod');
-Route::get('/consulta/prodAll','ProductoController@listaprod');
-Route::get('/consulta/prod/{id}','ProductoController@consultaprodById');
-Route::get('/prod','ProductoController@menuprod');
-Route::get('/creaprod','ProductoController@creaprod');
-Route::post('/grabaprod','ProductoController@grabaprod');
-Route::get('/modprod','ProductoController@modprod');
-Route::get('/eliprod','ProductoController@eliprod');
+Route::get('/consulta/prod','ProductoController@consultaprod');//vista busqueda producto x cod nom suc cat
+Route::get('/consulta/prodAll','ProductoController@listaprod'); //listado de todos los productos
+Route::get('/consulta/buscaxcod/{dato}','ProductoController@buscaxcod'); ////// Busqueda  /////
+Route::get('/consulta/buscaxnom/{dato}','ProductoController@buscaxnom'); /////   de          
+Route::get('/consulta/buscaxsuc/{dato}','ProductoController@buscaxsuc'); /////   Productos
+Route::get('/consulta/buscaxcat/{dato}','ProductoController@buscaxcat'); /////   Por distintas categorias
+Route::get('/prod','ProductoController@menuprod');//menu maestro productos
+Route::get('/creaprod','ProductoController@creaprod');//formulario creacion productos
+Route::post('/grabaprod','ProductoController@grabaprod');//graba datos producto nuevo
 
 
 Route::get('/consulta/sucAll','SucursalController@listasuc');
 Route::get('/suc','SucursalController@menusuc');
 Route::get('/creasuc','SucursalController@creasuc');
 Route::post('/grabasuc','SucursalController@grabasuc');
-Route::get('/modsuc','SucursalController@modsuc');
-Route::get('/elisuc','SucursalController@elisuc');
 
 Route::get('/consulta/catAll','CategoriaController@listacat');
 Route::get('/cat','CategoriaController@menucat');
 Route::get('/creacat','CategoriaController@creacat');
 Route::post('/grabacat','CategoriaController@grabacat');
-Route::get('/modcat','CategoriaController@modcat');
-Route::get('/elicat','CategoriaController@elicat');
 
 

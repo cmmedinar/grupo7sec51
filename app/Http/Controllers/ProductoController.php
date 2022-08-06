@@ -13,6 +13,62 @@ class ProductoController extends Controller
         return view('/productos/producto');
     }
 
+
+    // Funciones de busqueda 
+    public function buscaxcod($dato){
+        $sucursals = Sucursal::get();
+        $categorias = Categoria::get();
+
+        $productos = Producto::where('codigo', 'LIKE', '%'.$dato.'%')->get();
+
+        return view('/productos/muestrabuscar',[
+            'productos' => $productos,
+            'categorias' => $categorias,
+            'sucursals' => $sucursals
+        ]);
+    }
+
+    public function buscaxnom($dato){
+        $sucursals = Sucursal::get();
+        $categorias = Categoria::get();
+
+        $productos = Producto::where('nombre', 'LIKE', '%'.$dato.'%')->get();
+
+        return view('/productos/muestrabuscar',[
+            'productos' => $productos,
+            'categorias' => $categorias,
+            'sucursals' => $sucursals
+        ]);
+    }
+
+    public function buscaxsuc($dato){ 
+        $sucursals = Sucursal::get();
+        $categorias = Categoria::get();
+
+        $productos = Producto::where('sucursal_id', $dato)->get();
+
+        return view('/productos/muestrabuscar',[
+            'productos' => $productos,
+            'categorias' => $categorias,
+            'sucursals' => $sucursals
+        ]);
+
+    }
+
+    public function buscaxcat($dato){
+        $sucursals = Sucursal::get();
+        $categorias = Categoria::get();
+
+        $productos = Producto::where('categoria_id', $dato)->get();
+
+        return view('/productos/muestrabuscar',[
+            'productos' => $productos,
+            'categorias' => $categorias,
+            'sucursals' => $sucursals
+        ]);
+
+    }
+
     public function creaprod(){
         $sucursals = Sucursal::get();
         $categorias = Categoria::get();
@@ -67,12 +123,18 @@ class ProductoController extends Controller
     public function eliprod(){
         return view('/productos/eliproducto');
     }
+
+    
     public function consultaprod(){
-        return view('/productos/consultaproducto');
+        $sucursals = Sucursal::get();
+        $categorias = Categoria::get();
+        return view('/productos/buscaproducto',[
+            'sucursals' => $sucursals],[
+             'categorias' => $categorias
+            ]);
     }
-    public function consultaprodById(){
-        return view('/productos/consultaByIdproducto');
-    }
+        
+
     public function listaprod(){
         $productos = Producto::get();
         $sucursals = Sucursal::get();
