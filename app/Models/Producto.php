@@ -13,8 +13,4 @@ class Producto extends Model
         return $this->belongsTo(Categoria::class,(categoria_id));
     }
 
-    public function sucursals(){
-        return $this->belongsTo(Sucursal::class,(sucursal_id));
-    }
-
 }

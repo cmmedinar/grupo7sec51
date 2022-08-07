@@ -1,10 +1,11 @@
 @extends('layouts.master')
 @section('title','- Buscar Productos')
+@section('vista','Buscar - Productos')
 @section('content')
 <br>
 <div class="container">
   <div class="row">
-    <div class="col-1"></div>
+    <div class="col-2"></div>
     <div class="col-2">
       <label for="codprod"><b>Ingrese Codigo</b></label>
       <input type="text" class="form-control  w-50" id="cod" name="cod" value="">
@@ -24,16 +25,6 @@
         @endforeach
       </select>
       <button type="button" class="btn btn-outline-success" onclick="location.href='/consulta/buscaxsuc/'+ document.getElementById('sucprod').value;">Buscar</button>
-    </div>
-    <div class="col-2">
-      <label for="catprod"><b>Categoria</b></label>
-      <select class="form-select" id="catprod" name="catprod">
-        <option selected></option>
-        @foreach($categorias as $categoria)
-            <option value={{ $categoria->id }}>{{ $categoria->nombre }}</option>
-        @endforeach
-      </select>
-      <button type="button" class="btn btn-outline-success" onclick="location.href='/consulta/buscaxcat/'+ document.getElementById('catprod').value;">Buscar</button>
     </div>
     <div class="col-1"></div>
   </div>

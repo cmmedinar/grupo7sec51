@@ -1,5 +1,6 @@
 @extends('layouts.master')
 @section('title','- Listado Sucursales')
+@section('vista','Listado - Sucursales')
 @section('content')
           <br>
           <div class="row">

@@ -1,5 +1,6 @@
 @extends('layouts.master')
 @section('title','- Listado Productos')
+@section('vista','Listado - Productos')
 @section('content')
           <br>
           <div class="row">
@@ -8,14 +9,11 @@
           <table class="table table-responsive table-striped" id="tablaprod">
             <thead>
                <tr style="font-size: large" class="table-primary">
-                   <th scope="col">ID Prod.</th>
+                   <th scope="col">ID</th>
                    <th scope="col">Codigo</th>
                    <th scope="col">Nombre</th>
                    <th scope="col">Categoria</th>
-                   <th scope="col">Sucursal</th>
                    <th scope="col">Descripcion</th>
-                   <th scope="col">Cantidad</th>
-                   <th scope="col">Precio</th>
                </tr>
              </thead>
             <tbody id="listado">
@@ -29,14 +27,7 @@
                            <td>{{ $categoria->nombre }}</td>  
                         @endif
                       @endforeach 
-                      @foreach($sucursals as $sucursal)
-                        @if($sucursal->id == $producto->sucursal_id)
-                           <td>{{ $sucursal->nombre }}</td>  
-                        @endif
-                      @endforeach  
                       <td>{{ $producto->descripcion }}</td>  
-                      <td align="center">{{ $producto->cantidad }}</td>  
-                      <td align="right">${{ $producto->precio }}</td>  
                   </tr>
                 @endforeach
             </tbody>

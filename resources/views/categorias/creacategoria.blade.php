@@ -1,5 +1,6 @@
 @extends('layouts.master')
 @section('title','- Ingreso Categoria')
+@section('vista','Ingreso de Categoria')
 
 @section('content')
 <br>

@@ -1,4 +1,5 @@
 @extends('layouts.master')
+@section('vista','Maestro - Productos')
 
 @section('content')
 <br><br>

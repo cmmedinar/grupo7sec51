@@ -1,5 +1,6 @@
 @extends('layouts.master')
 @section('title','- Listado Categorias')
+@section('vista','Listado - Categorias')
 @section('content')
           <br>
           <div class="row">

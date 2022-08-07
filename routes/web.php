@@ -17,8 +17,11 @@ Route::get('/', function () {
     return view('/layouts/master');
 });
 
+Route::get('/inventario/asignar','InventarioController@asignar'); //consuta total de inventario
+Route::post('/inventario/grabainv','InventarioController@grabainv'); //consuta total de inventario
 
 
+Route::get('/consulta/invAll','InventarioController@invAll'); //consuta total de inventario
 Route::get('/consulta/prod','ProductoController@consultaprod');//vista busqueda producto x cod nom suc cat
 Route::get('/consulta/prodAll','ProductoController@listaprod'); //listado de todos los productos
 Route::get('/consulta/buscaxcod/{dato}','ProductoController@buscaxcod'); ////// Busqueda  /////

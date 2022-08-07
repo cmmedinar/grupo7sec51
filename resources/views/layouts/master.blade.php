@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Stock @yield('title')</title>
+    <title>Sistema de Stock @yield('title')</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="css/estilo.css" >
   </head>
@@ -33,12 +33,12 @@
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Transaccion
+                Inventario
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Venta</a></li>
-                <li><a class="dropdown-item" href="#">Compra</a></li>
-                <li><a class="dropdown-item" href="#">Traslado</a></li>
+                <li><a class="dropdown-item" href="/inventario/asignar/">Asignar a Sucursal</a></li>
+                <li><a class="dropdown-item" href="#">Rebajar Productos</a></li>
+                <li><a class="dropdown-item" href="#">Trasladar Productos</a></li>
               </ul>
             </li>
             <li class="nav-item dropdown">
@@ -47,8 +47,9 @@
               </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="/consulta/prod/">Buscar Producto</a></li>
-                <li><a class="dropdown-item" href="/consulta/prodAll/">Listado de Productos</a></li>
+                <li><a class="dropdown-item" href="/consulta/invAll/">Listado de Inventario</a></li>
                 <li><a class="dropdown-item" href="/consulta/sucAll/">Listado de Sucursales</a></li>
+                <li><a class="dropdown-item" href="/consulta/prodAll/">Listado de Productos</a></li>
                 <li><a class="dropdown-item" href="/consulta/catAll/">Listado de Categorias</a></li>
                 
               </ul>
@@ -58,7 +59,9 @@
             </li>
           </ul>
         </div>
-      </div>
+        <span class="navbar-brand mb-0 h1">@yield('vista')</span>
+        <span class="navbar-brand mb-0 h1"><p>&nbsp;&nbsp;&nbsp;&nbsp<p></span>
+       </div>
     </nav>
     <br><br>
         

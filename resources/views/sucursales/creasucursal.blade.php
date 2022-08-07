@@ -1,5 +1,6 @@
 @extends('layouts.master')
 @section('title','- Ingreso Sucursal')
+@section('vista','Ingreso de Sucursal')
 
 @section('content')
 <br>

@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Producto;
 use App\Models\Sucursal;
 use App\Models\Categoria;
+use App\Models\Inventario;
+
 
 class ProductoController extends Controller
 {
@@ -18,12 +20,14 @@ class ProductoController extends Controller
     public function buscaxcod($dato){
         $sucursals = Sucursal::get();
         $categorias = Categoria::get();
+        $inventarios = Inventario::get();
 
         $productos = Producto::where('codigo', 'LIKE', '%'.$dato.'%')->get();
 
         return view('/productos/muestrabuscar',[
             'productos' => $productos,
             'categorias' => $categorias,
+            'inventarios' => $inventarios,
             'sucursals' => $sucursals
         ]);
     }
@@ -31,12 +35,14 @@ class ProductoController extends Controller
     public function buscaxnom($dato){
         $sucursals = Sucursal::get();
         $categorias = Categoria::get();
+        $inventarios = Inventario::get();
 
         $productos = Producto::where('nombre', 'LIKE', '%'.$dato.'%')->get();
 
         return view('/productos/muestrabuscar',[
             'productos' => $productos,
             'categorias' => $categorias,
+            'inventarios' => $inventarios,
             'sucursals' => $sucursals
         ]);
     }
@@ -44,31 +50,20 @@ class ProductoController extends Controller
     public function buscaxsuc($dato){ 
         $sucursals = Sucursal::get();
         $categorias = Categoria::get();
+        $productos = Producto::get();
 
-        $productos = Producto::where('sucursal_id', $dato)->get();
+        $inventarios = Inventario::where('sucursal_id', $dato)->get();
 
         return view('/productos/muestrabuscar',[
             'productos' => $productos,
             'categorias' => $categorias,
+            'inventarios' => $inventarios,
             'sucursals' => $sucursals
         ]);
 
     }
 
-    public function buscaxcat($dato){
-        $sucursals = Sucursal::get();
-        $categorias = Categoria::get();
-
-        $productos = Producto::where('categoria_id', $dato)->get();
-
-        return view('/productos/muestrabuscar',[
-            'productos' => $productos,
-            'categorias' => $categorias,
-            'sucursals' => $sucursals
-        ]);
-
-    }
-
+    
     public function creaprod(){
         $sucursals = Sucursal::get();
         $categorias = Categoria::get();
@@ -85,10 +80,7 @@ class ProductoController extends Controller
                 'codprod' => 'required',
                 'nomprod' => 'required',
                 'catprod' => 'required',
-                'sucprod' => 'required',
                 'desprod' => 'required',
-                'cantprod' => 'required',
-                'precioprod' => 'required'
             ]);  
           
         //dd($request);
@@ -96,11 +88,7 @@ class ProductoController extends Controller
         $producto->codigo = $request -> codprod;
         $producto->nombre = $request -> nomprod;
         $producto->categoria_id = $request -> catprod;
-        $producto->sucursal_id = $request -> sucprod;
         $producto->descripcion = $request -> desprod;
-        $producto->cantidad = $request -> cantprod;
-        $producto->precio = $request ->precioprod;
-        $producto->estado = true;
         
         $producto->save();
 
@@ -126,26 +114,22 @@ class ProductoController extends Controller
 
     
     public function consultaprod(){
-        $sucursals = Sucursal::get();
-        $categorias = Categoria::get();
+        $sucursals = Sucursal::get()->sortBy('nombre');
         return view('/productos/buscaproducto',[
-            'sucursals' => $sucursals],[
-             'categorias' => $categorias
+            'sucursals' => $sucursals
             ]);
     }
         
 
     public function listaprod(){
         $productos = Producto::get();
-        $sucursals = Sucursal::get();
         $categorias = Categoria::get();
 
         //dd($categorias);
 
         return view('/productos/listaproducto',
             ['productos' => $productos,
-            'categorias' => $categorias,
-            'sucursals' => $sucursals
+            'categorias' => $categorias
              ]);
     }
     

@@ -9,8 +9,8 @@ class Sucursal extends Model
     protected $primaryKey = 'id';
     protected $table = 'sucursals';
 
-    public function productossuc(){
-        return $this->hasMany(Producto::class);
+    public function inventariossuc(){
+        return $this->hasMany(Inventario::class);
    }
 
 }
