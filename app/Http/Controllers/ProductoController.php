@@ -65,12 +65,10 @@ class ProductoController extends Controller
 
     
     public function creaprod(){
-        $sucursals = Sucursal::get();
         $categorias = Categoria::get();
 
         return view('/productos/creaproducto',[
-            'sucursals' => $sucursals],[
-             'categorias' => $categorias
+            'categorias' => $categorias
             ]);
     }
 
@@ -103,11 +101,53 @@ class ProductoController extends Controller
             ]);
 
     }
-
     
     public function modprod(){
-        return view('/productos/modproducto');
+        $productos = Producto::get();
+        return view('/productos/modproducto',[
+            'productos' => $productos
+        ]);
     }
+
+    public function modprodId($id){
+            $categorias = Categoria::get();
+            $productos = Producto::where('id',$id)->get();
+            //dd($productos);
+            return view('/productos/muestramodprod',[
+                'productos' => $productos],[
+                'categorias' => $categorias
+                ]);
+        }
+    
+    public function grabamodprod(Request $request, $id){
+        //dd($request);
+
+            $this->validate($request,[
+                'codprod' => 'required',
+                'nomprod' => 'required',
+                'catprod' => 'required',
+                'desprod' => 'required',
+            ]);  
+          
+        //dd($request);
+        $producto = Producto::where('id',$id)->update([
+            'codigo' => $request -> codprod,
+            'nombre' => $request -> nomprod,
+            'categoria_id' => $request -> catprod,
+            'descripcion' => $request -> desprod
+        ]);
+
+        //volvemos a cargar el formulario de modificacion
+        $productos = Producto::get();
+        return view('/productos/modproducto',[
+            'productos' => $productos
+        ]);
+        
+
+    }   
+
+
+
     public function eliprod(){
         return view('/productos/eliproducto');
     }

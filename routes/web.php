@@ -19,9 +19,8 @@ Route::get('/', function () {
 
 Route::get('/inventario/asignar','InventarioController@asignar'); //consuta total de inventario
 Route::post('/inventario/grabainv','InventarioController@grabainv'); //consuta total de inventario
-
-
 Route::get('/consulta/invAll','InventarioController@invAll'); //consuta total de inventario
+
 Route::get('/consulta/prod','ProductoController@consultaprod');//vista busqueda producto x cod nom suc cat
 Route::get('/consulta/prodAll','ProductoController@listaprod'); //listado de todos los productos
 Route::get('/consulta/buscaxcod/{dato}','ProductoController@buscaxcod'); ////// Busqueda  /////
@@ -30,7 +29,10 @@ Route::get('/consulta/buscaxsuc/{dato}','ProductoController@buscaxsuc'); /////  
 Route::get('/consulta/buscaxcat/{dato}','ProductoController@buscaxcat'); /////   Por distintas categorias
 Route::get('/prod','ProductoController@menuprod');//menu maestro productos
 Route::get('/creaprod','ProductoController@creaprod');//formulario creacion productos
+Route::get('/modprod','ProductoController@modprod');//modifica / elimina productos
+Route::get('/modprodId/{id}','ProductoController@modprodId');//modifica / elimina productos
 Route::post('/grabaprod','ProductoController@grabaprod');//graba datos producto nuevo
+Route::put('/grabamodprod/{id}','ProductoController@grabamodprod');//graba datos producto modificado
 
 
 Route::get('/consulta/sucAll','SucursalController@listasuc');
